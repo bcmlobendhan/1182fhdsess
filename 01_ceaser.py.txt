@@ -1,0 +1,27 @@
+decrypted = b”abcdefghijklmnopqrstuvwxyz”
+encrypted = b”Ithadbeenaterriblehorriblenogoodverybadday”
+
+encrypt_table=bytes.maketrans(decrypted,encrypted)
+decrypt_table=bytes.maketrans(encrypted,decrypted) 
+
+result=''
+message=''
+choice=''
+
+while (choice !='0')
+{
+	choice=input("\n Do you want to encrypt or decrypt your message? \n 1 to decrypt 2to encrypt 0t to exit")
+
+                  if choice=='1':
+	                  message=input('\n Enter message to decrypt:')
+                  	  result=message_traslate(decrypt_table)
+                 	  print(result+'\n\n')
+
+                  elif choice=='2':
+	                  message=input('\n Enter message to encrypt:')
+	                  result=message_traslate(encrypt_table)
+	                  print(result+'\n\n')
+
+                  elif choice!='0':
+	                  (print('you have entered an invalid input.\n\n)
+}
